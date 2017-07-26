@@ -22,4 +22,10 @@ public class SampleTestNgTest extends TestNgTestBase {
     driver.get(baseUrl);
     Assert.assertTrue("loginData".equals(homepage.form.getAttribute("name")));
   }
+  
+  @Test
+  public void shouldHaveTitle () {
+    driver.get(baseUrl);
+    Assert.assertFalse("".equals(homepage.getTitle()));
+  }
 }
